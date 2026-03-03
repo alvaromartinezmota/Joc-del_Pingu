@@ -5,25 +5,25 @@ import java.util.ArrayList;
 public class Partida {
 
     private Tablero tablero;
-    private ArrayList<Jugador> jugadores;
-    private int turno;
+    private ArrayList<Pinguino> jugadores;
+    private int turnoActual;
 
-    public Partida() {
-        this.tablero = new Tablero();
+    public Partida(int tamañoTablero) {
+        this.tablero = new Tablero(tamañoTablero);
         this.jugadores = new ArrayList<>();
-        this.turno = 0;
+        this.turnoActual = 0;
     }
 
-    public void añadirJugador(Jugador jugador) {
+    public void añadirJugador(Pinguino jugador) {
         jugadores.add(jugador);
     }
 
-    public Jugador getJugadorActual() {
-        return jugadores.get(turno);
+    public Pinguino getJugadorActual() {
+        return jugadores.get(turnoActual);
     }
 
     public void siguienteTurno() {
-        turno = (turno + 1) % jugadores.size();
+        turnoActual = (turnoActual + 1) % jugadores.size();
     }
 
     public Tablero getTablero() {
