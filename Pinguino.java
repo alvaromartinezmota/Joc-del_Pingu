@@ -12,6 +12,9 @@ public class Pinguino extends Jugador {
     @Override
     public void mover(int nuevaPosicion) {
         this.posicion = nuevaPosicion;
+        if (this.posicion < 0) this.posicion = 0;
+
+
     }
 
     public Inventario getInventario() {
