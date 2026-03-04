@@ -32,6 +32,8 @@ public class Tablero {
         return casillas.get(posicion);
     }
 
+
+
     public int getTamaño() {
         return casillas.size();
     }
